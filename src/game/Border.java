@@ -1,12 +1,14 @@
+package game;
 
 public class Border {
 
-    @Override
-    public String toString() {
+
+    public String print() {
 
         String blank ="";
-
-        System.out.println("s");
+        blank += "\n";
+        blank += "\t"+"R";
+        blank += "\n";
 
         for(int row = 0; row < 3; row++){
             for(int col = 0; col < 16; col++){
@@ -19,15 +21,13 @@ public class Border {
                 if(row == 2 && col == 8){
                     blank += "\t";
                 }
-
                 blank += "_";
-
-
             }
             blank += "\n";
             blank += "\n";
 
         }
+        blank += "\t"+"\t"+" "+"K";
 
         return blank;
 
