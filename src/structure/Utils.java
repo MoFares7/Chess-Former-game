@@ -11,13 +11,12 @@ public class Utils {
 
     }
 
-    public boolean isWall(){
-        if(border.print().isBlank()){
-            return false;
+   public void move(){
 
-        }
-        else{
-            return  true;
-        }
     }
+
+    public void nextSteps(){
+
+    }
+
 }
