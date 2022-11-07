@@ -34,8 +34,8 @@ public class Utils {
             // Print the row
             for(int j = 0; j < 16; j++)
             {
+
                 plan[0][3] = plan[row][col];
-          //      plan[0][3] = '_';
                 plan[row][col]='R';
 
                 System.out.print(plan[i][j] + " ");
