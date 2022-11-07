@@ -8,7 +8,7 @@ public class Border {
 
     // Function that prints all
 // unique rows in a given matrix.
-   public void printBorder(char plan[][])
+   public void printBorder(char[][] plan)
     {
         // Traverse through the matrix
         for(int i = 0; i < ROW; i++)
