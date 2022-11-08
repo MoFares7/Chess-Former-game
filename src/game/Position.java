@@ -8,7 +8,12 @@ public class Position {
          this.x = x;
          this.y = y;
    }
+
    boolean isValid(){
-      return  y > -1 && y< 10 && x < 5 && x > -1;
+      if(y > -1 && y< 10 && x < 5 && x > -1)
+      {
+          return  true;
+      }
+      return false;
    }
 }
