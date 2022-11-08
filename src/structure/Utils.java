@@ -17,11 +17,9 @@ public class Utils {
 
     public static void getMove(char[][] plan, int row, int col)
     {
-
         // Traverse through the matrix
         for(int i = 0; i < 4; i++)
         {
-
             // Check if there is similar column
             // is already printed, i.e if i and
             // jth column match.
@@ -44,22 +42,19 @@ public class Utils {
                 }
                 if(isEmpty(plan , row , col))
                 {
-
-                    plan[1][10] = plan[row][col];
-                   // plan[1][11] = plan[row][col];
                     plan[row + 1][col]='R';
-
                     System.out.print(plan[i][j] + " ");
                     plan[row+1][col] = '_';
                 }
 
             }
-
             System.out.println();
             System.out.println();
         }
     }
+    public void nextSteps(){
 
+    }
     public static boolean isWall(char[][] plan , int row, int col) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 16; j++) {
@@ -71,6 +66,7 @@ public class Utils {
 
         }
         return false;
+
     }    public static boolean isEmpty(char[][] plan , int row, int col) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 16; j++) {
@@ -83,8 +79,6 @@ public class Utils {
         }
         return false;
     }
-    public void nextSteps(){
 
-    }
 
 }
