@@ -1,17 +1,17 @@
 package game;
 
 
+import constrant.Helper;
+
 public class Border {
 
-    static int ROW = 4;
-    static int COL = 16;
-
+  static Helper position = new Helper();
     // Function that prints all
 // unique rows in a given matrix.
    public void printBorder(char[][] plan)
     {
         // Traverse through the matrix
-        for(int i = 0; i < ROW; i++)
+        for(int i = 0; i < position.getNumVertical + 1; i++)
         {
 
             // Check if there is similar column
@@ -19,12 +19,12 @@ public class Border {
             // jth column match.
             for(int j = 0; j < i; j++) {
 
-                for (int k = 0; k < COL; k++)
+                for (int k = 0; k < position.getNumHoraizonal; k++)
                     if (plan[i][k] != plan[j][k]);
 
             }
                 // Print the row
-                for(int j = 0; j < COL; j++)
+                for(int j = 0; j < position.getNumHoraizonal; j++)
                     System.out.print(plan[i][j] + " ");
 
                 System.out.println();
