@@ -15,12 +15,12 @@ public class Border {
         {
             for(int j = 0; j < i; j++) {
 
-                for (int k = 0; k < position.getNumHoraizonal; k++)
+                for (int k = 0; k < position.getNumHorizontal; k++)
                     if (plan[i][k] != plan[j][k]);
 
             }
                 // Print the row
-                for(int j = 0; j < position.getNumHoraizonal; j++)
+                for(int j = 0; j < position.getNumHorizontal; j++)
                     System.out.print(plan[i][j] + "  ");
 
                 System.out.println();
