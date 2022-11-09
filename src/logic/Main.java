@@ -1,6 +1,7 @@
 package logic;
 
 import game.Border;
+import game.Color;
 import game.Plan;
 import structure.Utils;
 
@@ -12,13 +13,14 @@ public class Main
 
     public static void main(String[] args)
     {
-
-        System.out.println();
-        System.out.println("Welcome in Chess Former Game Ready");
-        System.out.println();
         Border border = new Border();
         Utils utils = new Utils();
         Plan plan = new  Plan();
+        Color color = new Color();
+        System.out.println();
+        System.out.println(color.RED + "Welcome in Chess Former Game Ready");
+        System.out.println();
+
 
   // initial border and print
        border.printBorder(plan.plan);
