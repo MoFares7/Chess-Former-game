@@ -83,6 +83,27 @@ public class Utils {
             System.out.println();
         }
     }
+    public static void getNextStates(char plan[][] , int row , int col , int i , int j)
+    {
+        if(isWall(plan, row , col))
+        {
+            plan[0][1] = plan[row][col];
+            plan[row][col]='R';
+
+            System.out.print(plan[i][j] + "  ");
+            plan[row][col] = '_';
+
+        }
+        if(isEmpty(plan , row , col))
+        {
+            plan[0][1] = plan[row][col];
+            plan[row + 1][col]='R';
+            System.out.print(plan[i][j] + "  ");
+            plan[row+1][col] = '_';
+
+        }
+
+    }
 
 
 }
