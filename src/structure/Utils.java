@@ -63,7 +63,26 @@ public class Utils {
         }
         return false;
     }
+    public static void getMove(char[][] plan, int row, int col)
+    {
+        // Traverse through the matrix
+        for(int i = 0; i < position.getNumVertical +1 ; i++)
+        {
+            for(int j = 0; j < i; j++) {
 
+                for (int k = 0; k < position.getNumHorizontal; k++)
+                    if (plan[i][k] != plan[j][k]);
+
+            }
+            // Print the row
+            for(int j = 0; j < position.getNumHorizontal; j++)
+            {
+                getNextStates(plan,row,col,i,j);
+            }
+            System.out.println();
+            System.out.println();
+        }
+    }
 
 
 }
