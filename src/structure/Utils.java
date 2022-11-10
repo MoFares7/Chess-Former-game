@@ -115,6 +115,17 @@ public class Utils {
         }
         return false;
     }
+    public static boolean isEmpty(char[][] plan, int row, int col)
+    {
+        for (int i = 0; i < position.getNumVertical; i++) {
+            for (int j = 0; j < position.getNumHorizontal; j++) {
+                if (plan[row][col] == ' ') {
+                    return true;
+                }
 
+            }
+        }
+        return false;
+    }
 
 }
