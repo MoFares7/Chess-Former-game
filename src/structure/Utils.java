@@ -127,5 +127,15 @@ public class Utils {
         }
         return false;
     }
+    public  boolean isWin(char[][] plan ,int input_row , int input_column)
+    {
+        if(level == 3)
+        {
+            System.out.println( color.CYAN +  "Configuration You are Win" );
+            return  true;
+        }
+        return  false;
+
+    }
 
 }
