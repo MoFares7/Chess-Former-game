@@ -102,7 +102,18 @@ public class Utils {
             plan[row+1][col] = '_';
 
         }
+    }
+    public static boolean isWall(char[][] plan, int row, int col)
+    {
+        for (int i = 0; i < position.getNumVertical; i++) {
+            for (int j = 0; j < position.getNumHorizontal; j++) {
+                if (plan[row][col] == '_') {
+                    return true;
+                }
 
+            }
+        }
+        return false;
     }
 
 
