@@ -11,6 +11,10 @@ public class Border {
     // unique rows in a given matrix.
    public void printBorder(char[][] plan)
     {
+        System.out.println();
+        System.out.println(color.RED + "Welcome in Chess Former Game Ready");
+        System.out.println();
+
         // Traverse through the matrix
         for(int i = 0; i < position.getNumVertical + 1; i++)
         {
