@@ -39,7 +39,7 @@ public class Utils {
             {
                 continue;
             }
-            if (isWin(plan, input_row, input_column))
+            if (isFinal(plan, input_row, input_column))
             {
                 break;
             }
@@ -127,7 +127,7 @@ public class Utils {
         }
         return false;
     }
-    public  boolean isWin(char[][] plan ,int input_row , int input_column)
+    public  boolean isFinal(char[][] plan , int input_row , int input_column)
     {
         if(level == 3)
         {
