@@ -15,7 +15,7 @@ public class Main
         Plan plan = new  Plan();
 
   // initial border and print
-       border.printBorder(plan.plan);
+      border.printBorder(plan.plan);
 
        utils.getUserPlay(plan.plan);
 
