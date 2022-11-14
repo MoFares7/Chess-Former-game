@@ -30,6 +30,7 @@ public class Border {
 
                 System.out.println();
                 System.out.println();
+
             }
         }
     }
