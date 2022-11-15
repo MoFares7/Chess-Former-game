@@ -75,7 +75,41 @@ public class Utils {
 
         return false;
     }
+    public static void getMove(char[][] plan, int row, int col)
+    {
+        // Traverse through the matrix
+        for(int i = 0; i < position.getNumVertical +1 ; i++)
+        {
+            for(int j = 0; j < i; j++)
+            {
+                for (int k = 0; k < position.getNumHorizontal; k++)
+                    if (plan[i][k] != plan[j][k]);
 
+            }
+            // Print the row
+            for(int j = 0; j < position.getNumHorizontal; j++)
+            {
+                if(isWall(plan, row , col))
+                {
+                    plan[0][1] = plan[row][col];
+                    plan[row][col]='R';
+                    System.out.print(plan[i][j] + "  ");
+                    plan[row][col] = '_';
+
+                }
+                if(isEmpty(plan , row , col))
+                {
+                    plan[0][1] = plan[row][col];
+                    plan[row + 1][col]='R';
+                    System.out.print(plan[i][j] + "  ");
+                    plan[row + 1][col] = '_';
+                }
+            }
+            System.out.println();
+            System.out.println();
+
+        }
+    }
     public static void getNextStates(char[][] plan , int row , int col )
     {
         List deepCopy = new ArrayList();
