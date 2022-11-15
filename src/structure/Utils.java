@@ -48,6 +48,33 @@ public class Utils {
             }
         }
     }
+    public boolean checkMove(char[][] plan , int input_row , int input_column)
+    {
+
+        if (level != input_row)
+        {
+            System.out.println( "Ops Can not Move to another Level ");
+            System.out.println(" You are Now in Level " +" "+ level );
+        }
+        else
+        {
+            if (isEmpty(plan, input_row, input_column))
+            {
+                level += 1;
+            }
+            if(!isFinalWin())
+            {
+                getMove(plan, input_row, input_column);
+                getNextStates(plan, input_row, input_column);
+            }
+            if(isFinalWin())
+            {
+                getMove(plan, input_row, input_column);
+            }
+        }
+
+        return false;
+    }
 
     public static void getNextStates(char[][] plan , int row , int col )
     {
