@@ -48,6 +48,7 @@ public class Utils {
             }
         }
     }
+    // This function is benefit to check if can move to another step or not
     public boolean checkMove(char[][] plan , int input_row , int input_column)
     {
 
