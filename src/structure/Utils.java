@@ -138,6 +138,7 @@ public class Utils {
             }
         }
     }
+    // This function is benefit to remember me when find Wall on border
     public static boolean isWall(char[][] plan, int row, int col)
     {
         for (int i = 0; i < position.getNumVertical; i++)
@@ -152,6 +153,7 @@ public class Utils {
         }
         return false;
     }
+    // This function is benefit to remember me when find empty on border
     public static boolean isEmpty(char[][] plan, int row, int col)
     {
         for (int i = 0; i < position.getNumVertical; i++) {
