@@ -164,6 +164,7 @@ public class Utils {
         }
         return false;
     }
+    // This function is benefit to end game when kill the King
     public  boolean isFinalWin()
     {
         if(level == 3)
