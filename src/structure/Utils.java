@@ -111,7 +111,7 @@ public class Utils {
 
         }
     }
-    public static void getNextStates(char[][] plan , int row , int col )
+    public  void getNextStates(char[][] plan , int row , int col )
     {
         List deepCopy = new ArrayList();
 
