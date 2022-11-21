@@ -20,15 +20,7 @@ public class Helper {
 
    Scanner scanner = new Scanner(System.in);
 
-   public void pathOfBFS()
-   {
-      BFS BFS = new BFS(160);
-      BFS.addEdge(0, 12);
-      BFS.addEdge(12,1);
-      BFS.addEdge(1, 2);
-      BFS.addEdge(2, 2);
-      BFS.addEdge(2, 7);
-   }
+
    public void chooseModeGame()
    {
       System.out.println("Please Enter 1 to UserPlayer Mode");
