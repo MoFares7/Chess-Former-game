@@ -5,9 +5,13 @@ import game.Border;
 import game.Plan;
 import structure.BFS;
 import structure.DFS;
+import structure.Dijkstra;
 import structure.Utils;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import static structure.Dijkstra.*;
 
 public class Main
 {
@@ -17,6 +21,7 @@ public class Main
         Border border = new Border();
         Utils utils = new Utils();
         Plan plan = new  Plan();
+        Helper position = new Helper();
 
         // initial border and print
         border.printBorder(plan.plan);
@@ -25,7 +30,9 @@ public class Main
             System.out.println("Please Enter 1 to UserPlayer Mode");
             System.out.println("Please Enter 2 to DFS Player Mode");
             System.out.println("Please Enter 3 to BFS Player Mode");
+            System.out.println("Please Enter 4 to Dijkstra Player Mode");
             System.out.print("The Mode game is : " + " ");
+
             int number = scanner.nextInt();
 
             switch (number)
@@ -38,12 +45,20 @@ public class Main
                 }
                 case 2:
                 {
+                    utils.getMove(Plan.plan ,2,7);
                     DFS.initializeDFS();
                     break;
                 }
                 case 3:
                 {
                     BFS.initializeBFS();
+                    break;
+                }
+                case 4:
+                {
+                    dijkstra_Path();
+                    printShortestDistance(state , position.source , position.dest , v);
+
                     break;
                 }
                 default:System.out.println("Invalid Value !");
