@@ -1,5 +1,6 @@
 package logic;
 
+import constrant.Helper;
 import game.Border;
 import game.Plan;
 import structure.BFS;
@@ -12,44 +13,14 @@ public class Main
 {
     public static void main(String[] args)
     {
-        Scanner scanner = new Scanner(System.in);
+
         Border border = new Border();
-        Utils utils = new Utils();
+        Helper helper = new Helper();
         Plan plan = new  Plan();
 
         // initial border and print
         border.printBorder(plan.plan);
 
-      //  utils.getUserPlay(plan.plan);
-
-        System.out.println("Please Enter 1 to UserPlayer Mode");
-        System.out.println("Please Enter 2 to DFS Player Mode");
-        System.out.println("Please Enter 3 to BFS Player Mode");
-        System.out.print("The Mode game is : " + " ");
-        int number = scanner.nextInt();
-
-        switch (number)
-        {
-            case 1:
-            {
-                border.printBorder(plan.plan);
-                utils.getUserPlay(plan.plan);
-                break;
-            }
-            case 2:
-            {
-                DFS.initializeDFS();
-                break;
-            }
-            case 3:
-            {
-                BFS.initializeBFS();
-                break;
-            }
-            default:System.out.println("Invalid Value !");
-        }
-
-
-
+        helper.chooseModeGame();
     }
 }
