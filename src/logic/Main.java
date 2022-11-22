@@ -5,10 +5,8 @@ import game.Border;
 import game.Plan;
 import structure.BFS;
 import structure.DFS;
-import structure.Dijkstra;
 import structure.Utils;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import static structure.Dijkstra.*;
@@ -57,7 +55,7 @@ public class Main
                 case 4:
                 {
                     dijkstra_Path();
-                    printShortestDistance(state , position.source , position.dest , v);
+                    printShortestDistance(state , position.source , position.dest , node);
 
                     break;
                 }
