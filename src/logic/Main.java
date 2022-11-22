@@ -50,12 +50,14 @@ public class Main
                 case 3:
                 {
                     BFS.initializeBFS();
+
                     break;
                 }
                 case 4:
                 {
                     dijkstra_Path();
                     printShortestDistance(state , position.source , position.dest , node);
+                    utils.getMove(Plan.plan ,2 , 7);
 
                     break;
                 }
