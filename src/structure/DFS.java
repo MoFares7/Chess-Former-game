@@ -15,5 +15,30 @@ public class DFS {
         return false;
     }
     // function to perform DFS on the graph
+    public static void dfs(int start, boolean[] visited)
+    {
+        // Print the current node
+        System.out.print(start + " ");
+
+        // Set current node as visited
+        visited[start] = true;
+
+        // For every node of the graph
+        for (int i = 0; i < Plan.plan[start].length; i++)
+        {
+            // If some node is adjacent to the current node,
+            // and it has not already been visited
+            if (Plan.plan[start][i] == 1 && (!visited[i]))
+            {
+                dfs(i, visited);
+                numOfNodeVisited++;
+            }
+        }
+    }
+    public static void Check_Path_DFS()
+    {
+       helper.getPath_DFS();
+    }
+
 
 }
