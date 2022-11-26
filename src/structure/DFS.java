@@ -40,5 +40,44 @@ public class DFS {
        helper.getPath_DFS();
     }
 
+    public static void initializeDFS()
+    {
+        // number of all property nodes
+        int v = 160;
+        // adjacency matrix
+        Plan.plan = new char[v][v];
+        boolean[] visited = new boolean[v];
 
+
+        System.out.println();
+        System.out.println(Color.CYAN_ITALIC+"Following is Depth First Search");
+
+        DFS.Check_Path_DFS();
+
+        DFS.dfs(1, visited);
+
+        System.out.println();
+
+        // to get all movement able in border and addition on graph
+        for(int i =0; i < helper.getNumVertical; i++)
+        {
+            for(int j =0; j < helper.getNumHorizontal; j++)
+            {
+
+                if(DFS.addEdgeDFS(40, 55))
+                {
+                    break;
+                }
+                else
+                {
+                    DFS.addEdgeDFS(i,j);
+                }
+            }
+        }
+        DFS.dfs(0, visited);
+
+        System.out.println();
+        System.out.println("This is Number of Nodes are Visited To Solution: " + numOfNodeVisited*4);
+
+    }
 }
