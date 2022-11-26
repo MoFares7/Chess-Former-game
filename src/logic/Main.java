@@ -24,7 +24,6 @@ public class Main
         // initial border and print
         border.printBorder(plan.plan);
 
-
             System.out.println("Please Enter 1 to UserPlayer Mode");
             System.out.println("Please Enter 2 to DFS Player Mode");
             System.out.println("Please Enter 3 to BFS Player Mode");
@@ -50,7 +49,6 @@ public class Main
                 case 3:
                 {
                     BFS.initializeBFS();
-
                     break;
                 }
                 case 4:
