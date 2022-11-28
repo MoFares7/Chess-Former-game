@@ -28,9 +28,10 @@ public class Main
             System.out.println("Please Enter 2 to DFS Player Mode");
             System.out.println("Please Enter 3 to BFS Player Mode");
             System.out.println("Please Enter 4 to Dijkstra Player Mode");
+            System.out.println("Please Enter 5 to A* Player Mode");
             System.out.print("The Mode game is : " + " ");
 
-            int number = scanner.nextInt();
+            int number = 5;
 
             switch (number)
             {
@@ -56,8 +57,11 @@ public class Main
                     dijkstra_Path();
                     printShortestDistance(state , position.source , position.dest , node);
                     utils.getMove(Plan.plan ,2 , 7);
-
                     break;
+                }
+                case 5:
+                {
+
                 }
                 default:System.out.println("Invalid Value !");
             }
