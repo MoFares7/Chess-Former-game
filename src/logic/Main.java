@@ -1,15 +1,21 @@
 package logic;
 
+import structure.Edge;
+import structure.Node;
 import constrant.Helper;
-import game.Border;
-import game.Plan;
-import structure.BFS;
-import structure.DFS;
-import structure.Utils;
+import game.view.Border;
+import game.view.Plan;
+import game.controle.BFS;
+import game.controle.DFS;
+import game.controle.UserPlay;
 
+import java.util.List;
 import java.util.Scanner;
 
-import static structure.Dijkstra.*;
+import static constrant.Helper.getPath_Astar;
+import static game.controle.AstarSearchAlgo.AsterSearch;
+import static game.controle.AstarSearchAlgo.printPath;
+import static game.controle.Dijkstra.*;
 
 public class Main
 {
@@ -17,7 +23,7 @@ public class Main
     {
         Scanner scanner = new Scanner(System.in);
         Border border = new Border();
-        Utils utils = new Utils();
+        UserPlay utils = new UserPlay();
         Plan plan = new  Plan();
         Helper position = new Helper();
 
@@ -28,10 +34,10 @@ public class Main
             System.out.println("Please Enter 2 to DFS Player Mode");
             System.out.println("Please Enter 3 to BFS Player Mode");
             System.out.println("Please Enter 4 to Dijkstra Player Mode");
-            System.out.println("Please Enter 5 to A* Player Mode");
+            System.out.println("Please Enter 5 to A Star Player Mode");
             System.out.print("The Mode game is : " + " ");
 
-            int number = 5;
+            int number = scanner.nextInt();
 
             switch (number)
             {
@@ -61,7 +67,8 @@ public class Main
                 }
                 case 5:
                 {
-
+                     getPath_Astar();
+                     break;
                 }
                 default:System.out.println("Invalid Value !");
             }
