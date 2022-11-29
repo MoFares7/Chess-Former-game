@@ -1,8 +1,8 @@
-package structure;
+package game.controle;
 
 import constrant.Helper;
-import game.Color;
-import game.Plan;
+import game.view.Color;
+import game.view.Plan;
 
 public class DFS {
     static Helper helper = new Helper();
