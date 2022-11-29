@@ -1,15 +1,16 @@
-package structure;
+package game.controle;
 
 import constrant.Helper;
-import game.Color;
-import game.Plan;
+import game.view.Color;
+import game.view.Plan;
+
 import java.util.*;
 
 
 public class BFS
 {
     static Helper helper = new Helper();
-    static  Utils utils = new Utils();
+    static UserPlay utils = new UserPlay();
     // Number of Node
     private static int node;
     static int numOfNodeVisited = 0;
