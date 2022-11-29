@@ -1,9 +1,8 @@
-package structure;
+package game.controle;
 
 import constrant.Helper;
-import game.Color;
+import game.view.Color;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
