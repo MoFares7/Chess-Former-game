@@ -77,7 +77,7 @@ public class DFS {
         DFS.dfs(0, visited);
 
         System.out.println();
-        System.out.println("This is Number of Nodes are Visited To Solution: " + numOfNodeVisited*4);
+        System.out.println("This is Number of Nodes are Visited To Solution: " + numOfNodeVisited);
 
     }
 }
