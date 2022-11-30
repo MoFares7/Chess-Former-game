@@ -2,10 +2,17 @@ package constrant;
 
 
 
-import static structure.DFS.addEdgeDFS;
-import static structure.BFS.addEdgeBFS;
-import static structure.Dijkstra.addEdge;
-import static structure.Dijkstra.state;
+import structure.Edge;
+import structure.Node;
+
+import java.util.List;
+
+import static game.controle.AstarSearchAlgo.AsterSearch;
+import static game.controle.AstarSearchAlgo.printPath;
+import static game.controle.DFS.addEdgeDFS;
+import static game.controle.BFS.addEdgeBFS;
+import static game.controle.Dijkstra.addEdge;
+import static game.controle.Dijkstra.state;
 
 public class Helper {
 
@@ -190,5 +197,902 @@ public class Helper {
       addEdge(state, 40, 62);
    }
 
+   public static void getPath_Astar()
+   {
+
+         //initialize the graph base on the Romania map
+
+      Node n0  = new Node("1",1);
+      Node n1  = new Node("1",130);
+      Node n2  = new Node("2",3);
+      Node n3  = new Node("3",4);
+      Node n4  = new Node("4",5);
+      Node n5  = new Node("5",6);
+      Node n6  = new Node("6",7);
+      Node n7  = new Node("7",8);
+      Node n8  = new Node("8",9);
+      Node n9  = new Node("9",10);
+      Node n10 = new Node("10",11);
+      Node n11 = new Node("11",12);
+      Node n12 = new Node("12",13);
+      Node n13 = new Node("13",14);
+      Node n14 = new Node("14",15);
+      Node n15 = new Node("15",16);
+      Node n16 = new Node("16",17);
+      Node n17 = new Node("17",2);
+      Node n18 = new Node("18",432);
+      Node n19 = new Node("19",32);
+      Node n20 = new Node("20",42);
+      Node n22 = new Node("22",52);
+      Node n21 = new Node("21",62);
+      Node n23 = new Node("23",72);
+      Node n24 = new Node("24",20);
+      Node n25 = new Node("25",29);
+      Node n26 = new Node("26",28);
+      Node n27 = new Node("27",27);
+      Node n28 = new Node("28",26);
+      Node n29 = new Node("29",24);
+      Node n30 = new Node("30",231);
+      Node n31 = new Node("31",22);
+      Node n32 = new Node("32",213);
+      Node n33 = new Node("33",433);
+      Node n34 = new Node("34",853);
+      Node n35 = new Node("35",367);
+      Node n36 = new Node("36",87);
+      Node n37 = new Node("37",673);
+      Node n38 = new Node("38",53);
+      Node n39 = new Node("39",83);
+      Node n40 = new Node("40",376);
+      Node n41 = new Node("41",63);
+      Node n42 = new Node("42",243);
+      Node n43 = new Node("43",233);
+      Node n44 = new Node("44",343);
+      Node n45 = new Node("45",342);
+      Node n46 = new Node("46",341);
+      Node n47 = new Node("47",31);
+      Node n55 = new Node("55",0);
+
+
+      //initialize the edges
+
+      n0.adjacencies = new Edge[]{
+              new Edge(n1,1),
+              new Edge(n2,1),
+              new Edge(n3,1),
+              new Edge(n4,1),
+              new Edge(n5,1),
+              new Edge(n6,1),
+              new Edge(n7,1),
+              new Edge(n8,1),
+              new Edge(n9,1),
+              new Edge(n10,1),
+              new Edge(n11,1),
+              new Edge(n12,1),
+              new Edge(n13,1),
+              new Edge(n14,1),
+              new Edge(n15,1),
+      };
+      n1.adjacencies = new Edge[]{
+              new Edge(n0,1),
+              new Edge(n2,1),
+              new Edge(n3,1),
+              new Edge(n4,1),
+              new Edge(n5,1),
+              new Edge(n6,1),
+              new Edge(n7,1),
+              new Edge(n8,1),
+              new Edge(n9,1),
+              new Edge(n10,1),
+              new Edge(n11,1),
+              new Edge(n12,1),
+              new Edge(n13,1),
+              new Edge(n14,1),
+              new Edge(n15,1),
+      };
+      n2.adjacencies = new Edge[]{
+              new Edge(n0,1),
+              new Edge(n1,1),
+              new Edge(n3,1),
+              new Edge(n4,1),
+              new Edge(n5,1),
+              new Edge(n6,1),
+              new Edge(n7,1),
+              new Edge(n8,1),
+              new Edge(n9,1),
+              new Edge(n10,1),
+              new Edge(n11,1),
+              new Edge(n12,1),
+              new Edge(n13,1),
+              new Edge(n14,1),
+              new Edge(n15,1),
+      };
+      n3.adjacencies = new Edge[]{
+              new Edge(n0,1),
+              new Edge(n1,1),
+              new Edge(n2,1),
+              new Edge(n4,1),
+              new Edge(n5,1),
+              new Edge(n6,1),
+              new Edge(n7,1),
+              new Edge(n8,1),
+              new Edge(n9,1),
+              new Edge(n10,1),
+              new Edge(n11,1),
+              new Edge(n12,1),
+              new Edge(n13,1),
+              new Edge(n14,1),
+              new Edge(n15,1),
+      };
+      n4.adjacencies = new Edge[]{
+              new Edge(n0,1),
+              new Edge(n2,1),
+              new Edge(n3,1),
+              new Edge(n1,1),
+              new Edge(n5,1),
+              new Edge(n6,1),
+              new Edge(n7,1),
+              new Edge(n8,1),
+              new Edge(n9,1),
+              new Edge(n10,1),
+              new Edge(n11,1),
+              new Edge(n12,1),
+              new Edge(n13,1),
+              new Edge(n14,1),
+              new Edge(n15,1),
+      };
+      n5.adjacencies = new Edge[]{
+              new Edge(n0,1),
+              new Edge(n2,1),
+              new Edge(n3,1),
+              new Edge(n4,1),
+              new Edge(n1,1),
+              new Edge(n6,1),
+              new Edge(n7,1),
+              new Edge(n8,1),
+              new Edge(n9,1),
+              new Edge(n10,1),
+              new Edge(n11,1),
+              new Edge(n12,1),
+              new Edge(n13,1),
+              new Edge(n14,1),
+              new Edge(n15,1),
+      };
+      n6.adjacencies = new Edge[]{
+              new Edge(n0,1),
+              new Edge(n2,1),
+              new Edge(n3,1),
+              new Edge(n4,1),
+              new Edge(n5,1),
+              new Edge(n1,1),
+              new Edge(n7,1),
+              new Edge(n8,1),
+              new Edge(n9,1),
+              new Edge(n10,1),
+              new Edge(n11,1),
+              new Edge(n12,1),
+              new Edge(n13,1),
+              new Edge(n14,1),
+              new Edge(n15,1),
+      };
+      n7.adjacencies = new Edge[]{
+              new Edge(n0,1),
+              new Edge(n2,1),
+              new Edge(n3,1),
+              new Edge(n4,1),
+              new Edge(n5,1),
+              new Edge(n6,1),
+              new Edge(n1,1),
+              new Edge(n8,1),
+              new Edge(n9,1),
+              new Edge(n10,1),
+              new Edge(n11,1),
+              new Edge(n12,1),
+              new Edge(n13,1),
+              new Edge(n14,1),
+              new Edge(n15,1),
+      };
+      n8.adjacencies = new Edge[]{
+              new Edge(n0,1),
+              new Edge(n2,1),
+              new Edge(n3,1),
+              new Edge(n4,1),
+              new Edge(n5,1),
+              new Edge(n6,1),
+              new Edge(n7,1),
+              new Edge(n1,1),
+              new Edge(n9,1),
+              new Edge(n10,1),
+              new Edge(n11,1),
+              new Edge(n12,1),
+              new Edge(n13,1),
+              new Edge(n14,1),
+              new Edge(n15,1),
+      };
+      n9.adjacencies = new Edge[]{
+              new Edge(n0,1),
+              new Edge(n2,1),
+              new Edge(n3,1),
+              new Edge(n4,1),
+              new Edge(n5,1),
+              new Edge(n6,1),
+              new Edge(n7,1),
+              new Edge(n8,1),
+              new Edge(n1,1),
+              new Edge(n10,1),
+              new Edge(n11,1),
+              new Edge(n12,1),
+              new Edge(n13,1),
+              new Edge(n14,1),
+              new Edge(n15,1),
+      };
+      n10.adjacencies = new Edge[]{
+              new Edge(n0,1),
+              new Edge(n2,1),
+              new Edge(n3,1),
+              new Edge(n4,1),
+              new Edge(n5,1),
+              new Edge(n6,1),
+              new Edge(n7,1),
+              new Edge(n8,1),
+              new Edge(n1,1),
+              new Edge(n9,1),
+              new Edge(n11,1),
+              new Edge(n12,1),
+              new Edge(n13,1),
+              new Edge(n14,1),
+              new Edge(n15,1),
+      };
+      n11.adjacencies = new Edge[]{
+              new Edge(n0,1),
+              new Edge(n2,1),
+              new Edge(n3,1),
+              new Edge(n4,1),
+              new Edge(n5,1),
+              new Edge(n6,1),
+              new Edge(n7,1),
+              new Edge(n8,1),
+              new Edge(n1,1),
+              new Edge(n10,1),
+              new Edge(n9,1),
+              new Edge(n12,1),
+              new Edge(n13,1),
+              new Edge(n14,1),
+              new Edge(n15,1),
+      };
+
+      n13.adjacencies = new Edge[]{
+              new Edge(n0,1),
+              new Edge(n2,1),
+              new Edge(n3,1),
+              new Edge(n4,1),
+              new Edge(n5,1),
+              new Edge(n6,1),
+              new Edge(n7,1),
+              new Edge(n8,1),
+              new Edge(n1,1),
+              new Edge(n10,1),
+              new Edge(n11,1),
+              new Edge(n12,1),
+              new Edge(n9,1),
+              new Edge(n14,1),
+              new Edge(n15,1),
+      };
+      n14.adjacencies = new Edge[]{
+              new Edge(n0,1),
+              new Edge(n2,1),
+              new Edge(n3,1),
+              new Edge(n4,1),
+              new Edge(n5,1),
+              new Edge(n6,1),
+              new Edge(n7,1),
+              new Edge(n8,1),
+              new Edge(n1,1),
+              new Edge(n10,1),
+              new Edge(n11,1),
+              new Edge(n12,1),
+              new Edge(n13,1),
+              new Edge(n9,1),
+              new Edge(n15,1),
+      };
+      n15.adjacencies = new Edge[]{
+              new Edge(n0,1),
+              new Edge(n2,1),
+              new Edge(n3,1),
+              new Edge(n4,1),
+              new Edge(n5,1),
+              new Edge(n6,1),
+              new Edge(n7,1),
+              new Edge(n8,1),
+              new Edge(n1,1),
+              new Edge(n10,1),
+              new Edge(n11,1),
+              new Edge(n12,1),
+              new Edge(n13,1),
+              new Edge(n14,1),
+              new Edge(n9,1),
+      };
+
+      n12.adjacencies = new Edge[]{
+              new Edge(n16,1),
+              new Edge(n17,1),
+              new Edge(n18,1),
+              new Edge(n19,1),
+              new Edge(n20,1),
+              new Edge(n21,1),
+              new Edge(n22,1),
+              new Edge(n23,1),
+              new Edge(n24,1),
+              new Edge(n25,1),
+              new Edge(n26,1),
+              new Edge(n27,1),
+              new Edge(n28,1),
+              new Edge(n29,1),
+              new Edge(n30,1),
+              new Edge(n31,1),
+              new Edge(n32,1),
+      };
+      n16.adjacencies = new Edge[]{
+              new Edge(n17,1),
+              new Edge(n18,1),
+              new Edge(n19,1),
+              new Edge(n20,1),
+              new Edge(n21,1),
+              new Edge(n22,1),
+              new Edge(n23,1),
+              new Edge(n24,1),
+              new Edge(n25,1),
+              new Edge(n26,1),
+              new Edge(n27,1),
+              new Edge(n28,1),
+              new Edge(n29,1),
+              new Edge(n30,1),
+              new Edge(n31,1),
+              new Edge(n32,1),
+      };
+      n17.adjacencies = new Edge[]{
+              new Edge(n16,1),
+              new Edge(n18,1),
+              new Edge(n19,1),
+              new Edge(n20,1),
+              new Edge(n21,1),
+              new Edge(n22,1),
+              new Edge(n23,1),
+              new Edge(n24,1),
+              new Edge(n25,1),
+              new Edge(n26,1),
+              new Edge(n27,1),
+              new Edge(n28,1),
+              new Edge(n29,1),
+              new Edge(n30,1),
+              new Edge(n31,1),
+              new Edge(n32,1),
+      };
+      n19.adjacencies = new Edge[]{
+              new Edge(n16,1),
+              new Edge(n17,1),
+              new Edge(n18,1),
+              new Edge(n20,1),
+              new Edge(n21,1),
+              new Edge(n22,1),
+              new Edge(n23,1),
+              new Edge(n24,1),
+              new Edge(n25,1),
+              new Edge(n26,1),
+              new Edge(n27,1),
+              new Edge(n28,1),
+              new Edge(n29,1),
+              new Edge(n30,1),
+              new Edge(n31,1),
+              new Edge(n32,1),
+      };
+      n20.adjacencies = new Edge[]{
+              new Edge(n16,1),
+              new Edge(n17,1),
+              new Edge(n18,1),
+              new Edge(n19,1),
+              new Edge(n21,1),
+              new Edge(n22,1),
+              new Edge(n23,1),
+              new Edge(n24,1),
+              new Edge(n25,1),
+              new Edge(n26,1),
+              new Edge(n27,1),
+              new Edge(n28,1),
+              new Edge(n29,1),
+              new Edge(n30,1),
+              new Edge(n31,1),
+              new Edge(n32,1),
+      };
+      n21.adjacencies = new Edge[]{
+              new Edge(n16,1),
+              new Edge(n17,1),
+              new Edge(n18,1),
+              new Edge(n19,1),
+              new Edge(n20,1),
+
+              new Edge(n22,1),
+              new Edge(n23,1),
+              new Edge(n24,1),
+              new Edge(n25,1),
+              new Edge(n26,1),
+              new Edge(n27,1),
+              new Edge(n28,1),
+              new Edge(n29,1),
+              new Edge(n30,1),
+              new Edge(n31,1),
+              new Edge(n32,1),
+      };
+      n22.adjacencies = new Edge[]{
+              new Edge(n16,1),
+              new Edge(n17,1),
+              new Edge(n18,1),
+              new Edge(n19,1),
+              new Edge(n20,1),
+              new Edge(n21,1),
+              new Edge(n23,1),
+              new Edge(n24,1),
+              new Edge(n25,1),
+              new Edge(n26,1),
+              new Edge(n27,1),
+              new Edge(n28,1),
+              new Edge(n29,1),
+              new Edge(n30,1),
+              new Edge(n31,1),
+              new Edge(n32,1),
+      };
+      n23.adjacencies = new Edge[]{
+              new Edge(n16,1),
+              new Edge(n17,1),
+              new Edge(n18,1),
+              new Edge(n19,1),
+              new Edge(n20,1),
+              new Edge(n21,1),
+              new Edge(n22,1),
+              new Edge(n24,1),
+              new Edge(n25,1),
+              new Edge(n26,1),
+              new Edge(n27,1),
+              new Edge(n28,1),
+              new Edge(n29,1),
+              new Edge(n30,1),
+              new Edge(n31,1),
+              new Edge(n32,1),
+      };
+      n24.adjacencies = new Edge[]{
+              new Edge(n16,1),
+              new Edge(n17,1),
+              new Edge(n18,1),
+              new Edge(n19,1),
+              new Edge(n20,1),
+              new Edge(n21,1),
+              new Edge(n22,1),
+              new Edge(n23,1),
+              new Edge(n25,1),
+              new Edge(n26,1),
+              new Edge(n27,1),
+              new Edge(n28,1),
+              new Edge(n29,1),
+              new Edge(n30,1),
+              new Edge(n31,1),
+              new Edge(n32,1),
+      };
+      n25.adjacencies = new Edge[]{
+              new Edge(n16,1),
+              new Edge(n17,1),
+              new Edge(n18,1),
+              new Edge(n19,1),
+              new Edge(n20,1),
+              new Edge(n21,1),
+              new Edge(n22,1),
+              new Edge(n23,1),
+              new Edge(n24,1),
+              new Edge(n26,1),
+              new Edge(n27,1),
+              new Edge(n28,1),
+              new Edge(n29,1),
+              new Edge(n30,1),
+              new Edge(n31,1),
+              new Edge(n32,1),
+      };
+      n26.adjacencies = new Edge[]{
+              new Edge(n16,1),
+              new Edge(n17,1),
+              new Edge(n18,1),
+              new Edge(n19,1),
+              new Edge(n20,1),
+              new Edge(n21,1),
+              new Edge(n22,1),
+              new Edge(n23,1),
+              new Edge(n24,1),
+              new Edge(n25,1),
+              new Edge(n27,1),
+              new Edge(n28,1),
+              new Edge(n29,1),
+              new Edge(n30,1),
+              new Edge(n31,1),
+              new Edge(n32,1),
+      };
+      n27.adjacencies = new Edge[]{
+              new Edge(n16,1),
+              new Edge(n17,1),
+              new Edge(n18,1),
+              new Edge(n19,1),
+              new Edge(n20,1),
+              new Edge(n21,1),
+              new Edge(n22,1),
+              new Edge(n23,1),
+              new Edge(n24,1),
+              new Edge(n25,1),
+              new Edge(n26,1),
+              new Edge(n28,1),
+              new Edge(n29,1),
+              new Edge(n30,1),
+              new Edge(n31,1),
+              new Edge(n32,1),
+      };
+      n28.adjacencies = new Edge[]{
+              new Edge(n16,1),
+              new Edge(n17,1),
+              new Edge(n18,1),
+              new Edge(n19,1),
+              new Edge(n20,1),
+              new Edge(n21,1),
+              new Edge(n22,1),
+              new Edge(n23,1),
+              new Edge(n24,1),
+              new Edge(n25,1),
+              new Edge(n26,1),
+              new Edge(n27,1),
+              new Edge(n29,1),
+              new Edge(n30,1),
+              new Edge(n31,1),
+              new Edge(n32,1),
+      };
+      n29.adjacencies = new Edge[]{
+              new Edge(n16,1),
+              new Edge(n17,1),
+              new Edge(n18,1),
+              new Edge(n19,1),
+              new Edge(n20,1),
+              new Edge(n21,1),
+              new Edge(n22,1),
+              new Edge(n23,1),
+              new Edge(n24,1),
+              new Edge(n25,1),
+              new Edge(n26,1),
+              new Edge(n27,1),
+              new Edge(n28,1),
+              new Edge(n30,1),
+              new Edge(n31,1),
+              new Edge(n32,1),
+      };
+      n30.adjacencies = new Edge[]{
+              new Edge(n16,1),
+              new Edge(n17,1),
+              new Edge(n18,1),
+              new Edge(n19,1),
+              new Edge(n20,1),
+              new Edge(n21,1),
+              new Edge(n22,1),
+              new Edge(n23,1),
+              new Edge(n24,1),
+              new Edge(n25,1),
+              new Edge(n26,1),
+              new Edge(n27,1),
+              new Edge(n28,1),
+              new Edge(n29,1),
+              new Edge(n31,1),
+              new Edge(n32,1),
+      };
+      n31.adjacencies = new Edge[]{
+              new Edge(n16,1),
+              new Edge(n17,1),
+              new Edge(n18,1),
+              new Edge(n19,1),
+              new Edge(n20,1),
+              new Edge(n21,1),
+              new Edge(n22,1),
+              new Edge(n23,1),
+              new Edge(n24,1),
+              new Edge(n25,1),
+              new Edge(n26,1),
+              new Edge(n27,1),
+              new Edge(n28,1),
+              new Edge(n29,1),
+              new Edge(n30,1),
+              new Edge(n32,1),
+      };
+      n32.adjacencies = new Edge[]{
+              new Edge(n16,1),
+              new Edge(n17,1),
+              new Edge(n18,1),
+              new Edge(n19,1),
+              new Edge(n20,1),
+              new Edge(n21,1),
+              new Edge(n22,1),
+              new Edge(n23,1),
+              new Edge(n24,1),
+              new Edge(n25,1),
+              new Edge(n26,1),
+              new Edge(n27,1),
+              new Edge(n28,1),
+              new Edge(n29,1),
+              new Edge(n30,1),
+              new Edge(n31,1),
+      };
+
+
+      n18.adjacencies = new Edge[]{
+              new Edge(n33,1),
+              new Edge(n34,1),
+              new Edge(n35,1),
+              new Edge(n36,1),
+              new Edge(n37,1),
+              new Edge(n38,1),
+              new Edge(n39,1),
+              new Edge(n40,1),
+              new Edge(n41,1),
+              new Edge(n42,1),
+              new Edge(n43,1),
+              new Edge(n44,1),
+              new Edge(n45,1),
+              new Edge(n46,1),
+              new Edge(n47,1),
+
+      };
+      n33.adjacencies = new Edge[]{
+
+              new Edge(n34,1),
+              new Edge(n35,1),
+              new Edge(n36,1),
+              new Edge(n37,1),
+              new Edge(n38,1),
+              new Edge(n39,1),
+              new Edge(n40,1),
+              new Edge(n41,1),
+              new Edge(n42,1),
+              new Edge(n43,1),
+              new Edge(n44,1),
+              new Edge(n45,1),
+              new Edge(n46,1),
+              new Edge(n47,1),
+
+      };
+      n34.adjacencies = new Edge[]{
+              new Edge(n33,1),
+              new Edge(n35,1),
+              new Edge(n36,1),
+              new Edge(n37,1),
+              new Edge(n38,1),
+              new Edge(n39,1),
+              new Edge(n40,1),
+              new Edge(n41,1),
+              new Edge(n42,1),
+              new Edge(n43,1),
+              new Edge(n44,1),
+              new Edge(n45,1),
+              new Edge(n46,1),
+              new Edge(n47,1),
+
+      };
+      n35.adjacencies = new Edge[]{
+              new Edge(n33,1),
+              new Edge(n34,1),
+              new Edge(n36,1),
+              new Edge(n37,1),
+              new Edge(n38,1),
+              new Edge(n39,1),
+              new Edge(n40,1),
+              new Edge(n41,1),
+              new Edge(n42,1),
+              new Edge(n43,1),
+              new Edge(n44,1),
+              new Edge(n45,1),
+              new Edge(n46,1),
+              new Edge(n47,1),
+
+      };
+      n36.adjacencies = new Edge[]{
+              new Edge(n33,1),
+              new Edge(n34,1),
+              new Edge(n35,1),
+              new Edge(n37,1),
+              new Edge(n38,1),
+              new Edge(n39,1),
+              new Edge(n40,1),
+              new Edge(n41,1),
+              new Edge(n42,1),
+              new Edge(n43,1),
+              new Edge(n44,1),
+              new Edge(n45,1),
+              new Edge(n46,1),
+              new Edge(n47,1),
+
+      };
+      n37.adjacencies = new Edge[]{
+              new Edge(n33,1),
+              new Edge(n34,1),
+              new Edge(n35,1),
+              new Edge(n36,1),
+              new Edge(n38,1),
+              new Edge(n39,1),
+              new Edge(n40,1),
+              new Edge(n41,1),
+              new Edge(n42,1),
+              new Edge(n43,1),
+              new Edge(n44,1),
+              new Edge(n45,1),
+              new Edge(n46,1),
+              new Edge(n47,1),
+
+      };
+      n38.adjacencies = new Edge[]{
+              new Edge(n33,1),
+              new Edge(n34,1),
+              new Edge(n35,1),
+              new Edge(n36,1),
+              new Edge(n37,1),
+              new Edge(n39,1),
+              new Edge(n40,1),
+              new Edge(n41,1),
+              new Edge(n42,1),
+              new Edge(n43,1),
+              new Edge(n44,1),
+              new Edge(n45,1),
+              new Edge(n46,1),
+              new Edge(n47,1),
+
+      };
+      n39.adjacencies = new Edge[]{
+              new Edge(n33,1),
+              new Edge(n34,1),
+              new Edge(n35,1),
+              new Edge(n36,1),
+              new Edge(n37,1),
+              new Edge(n38,1),
+              new Edge(n40,1),
+              new Edge(n41,1),
+              new Edge(n42,1),
+              new Edge(n43,1),
+              new Edge(n44,1),
+              new Edge(n45,1),
+              new Edge(n46,1),
+              new Edge(n47,1),
+
+      };
+      n41.adjacencies = new Edge[]{
+              new Edge(n33,1),
+              new Edge(n34,1),
+              new Edge(n35,1),
+              new Edge(n36,1),
+              new Edge(n37,1),
+              new Edge(n38,1),
+              new Edge(n39,1),
+              new Edge(n40,1),
+              new Edge(n42,1),
+              new Edge(n43,1),
+              new Edge(n44,1),
+              new Edge(n45,1),
+              new Edge(n46,1),
+              new Edge(n47,1),
+
+      };
+      n42.adjacencies = new Edge[]{
+              new Edge(n33,1),
+              new Edge(n34,1),
+              new Edge(n35,1),
+              new Edge(n36,1),
+              new Edge(n37,1),
+              new Edge(n38,1),
+              new Edge(n39,1),
+              new Edge(n40,1),
+              new Edge(n41,1),
+              new Edge(n43,1),
+              new Edge(n44,1),
+              new Edge(n45,1),
+              new Edge(n46,1),
+              new Edge(n47,1),
+
+      };
+      n43.adjacencies = new Edge[]{
+              new Edge(n33,1),
+              new Edge(n34,1),
+              new Edge(n35,1),
+              new Edge(n36,1),
+              new Edge(n37,1),
+              new Edge(n38,1),
+              new Edge(n39,1),
+              new Edge(n40,1),
+              new Edge(n41,1),
+              new Edge(n42,1),
+              new Edge(n44,1),
+              new Edge(n45,1),
+              new Edge(n46,1),
+              new Edge(n47,1),
+
+      };
+      n44.adjacencies = new Edge[]{
+              new Edge(n33,1),
+              new Edge(n34,1),
+              new Edge(n35,1),
+              new Edge(n36,1),
+              new Edge(n37,1),
+              new Edge(n38,1),
+              new Edge(n39,1),
+              new Edge(n40,1),
+              new Edge(n41,1),
+              new Edge(n42,1),
+              new Edge(n43,1),
+              new Edge(n45,1),
+              new Edge(n46,1),
+              new Edge(n47,1),
+
+      };
+      n45.adjacencies = new Edge[]{
+              new Edge(n33,1),
+              new Edge(n34,1),
+              new Edge(n35,1),
+              new Edge(n36,1),
+              new Edge(n37,1),
+              new Edge(n38,1),
+              new Edge(n39,1),
+              new Edge(n40,1),
+              new Edge(n41,1),
+              new Edge(n42,1),
+              new Edge(n43,1),
+              new Edge(n44,1),
+              new Edge(n46,1),
+              new Edge(n47,1),
+
+      };
+      n46.adjacencies = new Edge[]{
+              new Edge(n33,1),
+              new Edge(n34,1),
+              new Edge(n35,1),
+              new Edge(n36,1),
+              new Edge(n37,1),
+              new Edge(n38,1),
+              new Edge(n39,1),
+              new Edge(n40,1),
+              new Edge(n41,1),
+              new Edge(n42,1),
+              new Edge(n43,1),
+              new Edge(n44,1),
+              new Edge(n45,1),
+              new Edge(n47,1),
+
+      };
+      n47.adjacencies = new Edge[]{
+              new Edge(n33,1),
+              new Edge(n34,1),
+              new Edge(n35,1),
+              new Edge(n36,1),
+              new Edge(n37,1),
+              new Edge(n38,1),
+              new Edge(n39,1),
+              new Edge(n40,1),
+              new Edge(n41,1),
+              new Edge(n42,1),
+              new Edge(n43,1),
+              new Edge(n44,1),
+              new Edge(n45,1),
+              new Edge(n46,1),
+
+      };
+      n40.adjacencies = new Edge[]{
+              new Edge(n55,1),
+
+      };
+      n55.adjacencies = new Edge[]{
+              new Edge(n40,1),
+      };
+
+      AsterSearch(n1,n55);
+
+      List<Node> path = printPath(n55);
+
+      System.out.println("Path: " + path);
+      System.out.println("This is Number Of Node are Visited" + " ["  + path.size() + "]");
+   }
 
 }
