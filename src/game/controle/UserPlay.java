@@ -1,13 +1,13 @@
-package structure;
+package game.controle;
 
 import constrant.Helper;
-import game.Color;
+import game.view.Color;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Utils {
+public class UserPlay {
 
     static Helper position = new Helper();
     static Color color = new Color();
