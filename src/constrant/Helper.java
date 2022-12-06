@@ -2,13 +2,15 @@ package constrant;
 
 
 
+import game.controle.UserPlay;
+import game.view.Color;
+import game.view.Plan;
 import structure.Edge;
 import structure.Node;
 
 import java.util.List;
 
-import static game.controle.AstarSearchAlgo.AsterSearch;
-import static game.controle.AstarSearchAlgo.printPath;
+import static game.controle.AstarSearchAlgo.*;
 import static game.controle.DFS.addEdgeDFS;
 import static game.controle.BFS.addEdgeBFS;
 import static game.controle.Dijkstra.addEdge;
@@ -21,6 +23,7 @@ public class Helper {
    public int getNumPropriety = 100;
    public int source = 0, dest = 55;
 
+   static UserPlay utils = new UserPlay();
    // This Function to all state is can movement inside Border
    public void getPath_DFS()
    {
@@ -200,7 +203,7 @@ public class Helper {
    public static void getPath_Astar()
    {
 
-         //initialize the graph base on the Romania map
+         //initialize the graph base on the border map
 
       Node n0  = new Node("1",1);
       Node n1  = new Node("1",130);
@@ -253,7 +256,7 @@ public class Helper {
       Node n55 = new Node("55",0);
 
 
-      //initialize the edges
+      //initialize the all edges is connected between node
 
       n0.adjacencies = new Edge[]{
               new Edge(n1,1),
@@ -1086,13 +1089,14 @@ public class Helper {
       n55.adjacencies = new Edge[]{
               new Edge(n40,1),
       };
-
-      AsterSearch(n1,n55);
+ // n1 is node source and n55 is destination
+      Heuristic(n1,n55);
 
       List<Node> path = printPath(n55);
 
-      System.out.println("Path: " + path);
+      System.out.println(Color.RESET +"Path: " + path);
       System.out.println("This is Number Of Node are Visited" + " ["  + path.size() + "]");
+      utils.getMove(Plan.plan ,2,7);
    }
 
 }
