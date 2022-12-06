@@ -1,7 +1,5 @@
 package logic;
 
-import structure.Edge;
-import structure.Node;
 import constrant.Helper;
 import game.view.Border;
 import game.view.Plan;
@@ -9,12 +7,9 @@ import game.controle.BFS;
 import game.controle.DFS;
 import game.controle.UserPlay;
 
-import java.util.List;
 import java.util.Scanner;
 
 import static constrant.Helper.getPath_Astar;
-import static game.controle.AstarSearchAlgo.AsterSearch;
-import static game.controle.AstarSearchAlgo.printPath;
 import static game.controle.Dijkstra.*;
 
 public class Main
@@ -68,6 +63,7 @@ public class Main
                 case 5:
                 {
                      getPath_Astar();
+
                      break;
                 }
                 default:System.out.println("Invalid Value !");
